@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./favicon_io/favicon.ico">
+  <!-- CSS BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>La Lectora</title>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-dark bg-primary">
-        <div class="container-fluid">
-            <p class="h2 text-light">Libreria La lectora</p>
-          <div>
-            <p class="h4 text-light">Categoria</p>
-            <div>
-              <label for="autor" class="h6 text-light">Autor</label>
-              <!-- lista desplegable de los autores -->
-              <select id="autor" class="custom-select">
-                <option value="" disabled selected>---</option>
-                <option value="Gabriel Garcia Marquez">Gabriel Garcia Marquez</option>
-                <option value="William Golding">William Golding</option>
-                <option value="Julio Verne">Julio Verne</option>
-                <option value="Miguel de Cervantes">Miguel de Cervantes</option>
-                <option value="Herman Melville">Herman Melville</option>
-                <option value="Ernest Hemingway">Ernest Hemingway</option>
-              </select>
-            </div>
-          </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="ms-3">
+        <p class="h2 text-light"><img src="./favicon_io/favicon.ico" alt="">Libreria La lectora</p>
+      </div>
+
+
+      <!-- DROPDOWN OPTIONS -->
+      <div class="me-5">
+        <p class="h4 text-light">Libros disponibles</p>
+        <div>
+          <label for="autor" class="h6 text-light">Autoras</label>
+          <select id="autor" class="custom-select border border-info" onchange="mostrarFiltrados()">
+            <option value="" disabled selected>Opciones</option>
+            <option value="Jane Austen">Jane Austen</option>
+            <option value="Virginia Woolf">Virginia Woolf</option>
+            <option value="Gabriela Mistral">Gabriela Mistral</option>
+            <option value="Isabel Allende">Isabel Allende</option>
+            <option value="Alejandra Pizarnik">Alejandra Pizarnik</option>
+            <option value="Agatha Christie">Agatha Christie</option>
+          </select>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-      <!-- Setear el resultado de la busqueda acá -->
-    <div id="libros" class="container mx-5 px-5 d-flex flex-column align-items-center mt-5"></div>
+  <!-- Setear el resultado de la busqueda acá -->
+  <div id="libros" class="container position-relative d-flex flex-column align-items-center mt-3 mb-5 justify-content-center"></div>
 
 
-
-    <script src="./js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
